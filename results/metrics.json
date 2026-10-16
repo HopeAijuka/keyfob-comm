@@ -1,0 +1,269 @@
+{
+  "config": {
+    "fs_audio": 8000.0,
+    "fm": 300.0,
+    "n_bits": 8,
+    "n_samples": 400,
+    "bit_rate": 9600.0,
+    "fs_rf": 307200.0,
+    "fc": 38400.0,
+    "packet_bits": 3320,
+    "payload_bits": 3200,
+    "airtime_ms": 345.8333333333333,
+    "n_sweep": 400,
+    "n_dist": 200,
+    "seed": 2026
+  },
+  "source": {
+    "signal_power": 0.5000000000000001,
+    "delta": 0.0078125,
+    "mse_quant": 6.314470693988969e-06,
+    "sqnr_db": 48.98633052344764,
+    "sqnr_theory_db": 49.919999999999995
+  },
+  "demo": {
+    "snr_db": 2.0,
+    "bit_errors": 0,
+    "accepted": true,
+    "recon": [
+      {
+        "snr": 2.0,
+        "accepted": true,
+        "mse": 6.314470693988969e-06,
+        "snr_rec": 48.98633052344764,
+        "n_err": 0
+      },
+      {
+        "snr": -1.0,
+        "accepted": false,
+        "mse": 8.822008877574675e-06,
+        "snr_rec": 47.534025138635066,
+        "n_err": 1
+      },
+      {
+        "snr": -3.0,
+        "accepted": false,
+        "mse": 0.006795977066623587,
+        "snr_rec": 18.66718099685749,
+        "n_err": 33
+      },
+      {
+        "snr": -5.0,
+        "accepted": false,
+        "mse": 0.046132515436434846,
+        "snr_rec": 10.349628686009515,
+        "n_err": 120
+      }
+    ]
+  },
+  "sweep_summary": {
+    "snr_psr90_db": 0.9197080291970805,
+    "snr_psr50_db": -0.1581395348837209,
+    "ebn0_psr90_db": 12.960907855756329,
+    "inband_psr90_db": 6.9403079424767045,
+    "p_star": 4.7401035590404565e-06,
+    "snr_star_sim_db": 1.6010463058925177,
+    "ebn0_star_db": 13.642246132451767,
+    "inband_star_db": 7.621646219172142,
+    "undetected_max": 0.0
+  },
+  "shannon": {
+    "B": 38400.0,
+    "Rb": 9600.0,
+    "R_src": 64000.0,
+    "eta_ook": 0.25,
+    "eta_bpsk": 0.5,
+    "shannon_snr_b_db": -7.230625362834811,
+    "shannon_snr_b_src_db": 3.3741974447291687,
+    "shannon_ebn0_ook_db": -1.2100254495551859,
+    "shannon_ebn0_bpsk_db": -0.8174568967388178,
+    "ook_req_ebn0_db": 13.352483570959246,
+    "bpsk_req_ebn0_db": 9.587858346847884,
+    "gap_ook_db": 14.562509020514431,
+    "gap_bpsk_db": 10.405315243586703,
+    "ultimate_db": -1.591745389548616,
+    "offset_b_to_sim": 6.020599913279624
+  },
+  "distance": {
+    "distance_m": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      70
+    ],
+    "snr_inband_db": [
+      38.49676102566164,
+      27.960711177422297,
+      21.79751711047345,
+      17.424661329182953,
+      14.032810873900985,
+      11.26146726223412,
+      8.918329625162656,
+      6.888611480943624,
+      5.098273195285273,
+      3.496761025661641,
+      2.048017045123771,
+      0.7254174139947764,
+      -1.6177202230767023
+    ],
+    "psr_awgn": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.895,
+      0.085,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "psr_rician": [
+      1.0,
+      1.0,
+      0.995,
+      1.0,
+      0.96,
+      0.905,
+      0.78,
+      0.565,
+      0.305,
+      0.15,
+      0.05,
+      0.0,
+      0.0
+    ],
+    "psr_rayleigh": [
+      1.0,
+      0.995,
+      0.985,
+      0.94,
+      0.815,
+      0.755,
+      0.605,
+      0.445,
+      0.345,
+      0.155,
+      0.095,
+      0.015,
+      0.005
+    ],
+    "noise_floor_dbm": -118.15668775632469,
+    "range90_awgn": 39.76190476190476,
+    "range90_rician": 30.2,
+    "range90_rayleigh": 21.599999999999998
+  },
+  "security": [
+    {
+      "label": "1",
+      "who": "owner",
+      "note": "UNLOCK pressed next to the car",
+      "link_ok": true,
+      "accepted": true,
+      "reason": "valid rolling code",
+      "counter": 1,
+      "car_counter": 1,
+      "cmd": 2
+    },
+    {
+      "label": "2",
+      "who": "attacker",
+      "note": "recorded UNLOCK signal re-transmitted (replay attack)",
+      "link_ok": true,
+      "accepted": false,
+      "reason": "replay: counter already used",
+      "counter": 1,
+      "car_counter": 1,
+      "cmd": 2
+    },
+    {
+      "label": "3",
+      "who": "owner",
+      "note": "3 presses out of range, then LOCK in range",
+      "link_ok": true,
+      "accepted": true,
+      "reason": "valid rolling code",
+      "counter": 5,
+      "car_counter": 5,
+      "cmd": 1
+    },
+    {
+      "label": "4",
+      "who": "stranger",
+      "note": "unpaired fob of another car",
+      "link_ok": false,
+      "accepted": false,
+      "reason": "ignored: device ID not paired with this car",
+      "counter": 1,
+      "car_counter": 5,
+      "cmd": null
+    },
+    {
+      "label": "5",
+      "who": "attacker",
+      "note": "forged packet: sniffed ID, valid CRC, guessed hop code",
+      "link_ok": true,
+      "accepted": false,
+      "reason": "hop code failed authentication (forged / wrong key)",
+      "counter": null,
+      "car_counter": 5,
+      "cmd": 2
+    },
+    {
+      "label": "6",
+      "who": "owner",
+      "note": "UNLOCK pressed at SNR = -6 dB (too noisy)",
+      "link_ok": false,
+      "accepted": false,
+      "reason": "dropped at link layer: sync word + CRC check failed",
+      "counter": 6,
+      "car_counter": 5,
+      "cmd": null
+    },
+    {
+      "label": "7",
+      "who": "owner",
+      "note": "user presses again, link is good",
+      "link_ok": true,
+      "accepted": true,
+      "reason": "valid rolling code",
+      "counter": 7,
+      "car_counter": 7,
+      "cmd": 2
+    },
+    {
+      "label": "8",
+      "who": "owner",
+      "note": "20 blind presses, then 1st press in range",
+      "link_ok": true,
+      "accepted": false,
+      "reason": "counter outside look-ahead window - press again to re-sync",
+      "counter": 28,
+      "car_counter": 7,
+      "cmd": 2
+    },
+    {
+      "label": "9",
+      "who": "owner",
+      "note": "2nd consecutive press -> re-synchronisation",
+      "link_ok": true,
+      "accepted": true,
+      "reason": "re-synchronised (two consecutive counters)",
+      "counter": 29,
+      "car_counter": 29,
+      "cmd": 2
+    }
+  ]
+}
